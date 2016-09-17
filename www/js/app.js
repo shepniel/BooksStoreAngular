@@ -78,7 +78,7 @@
 			]			
 		}
 		];
-		var app = angular.module('bookStoreApp',["ngRoute"]);
+		var app = angular.module('bookStoreApp',['ui.router']);
 	app.controller('BookStoreController', function(){
 		this.articulos=libros;
 
@@ -105,12 +105,25 @@
 		this.ficha=libros;
 
 	});
-	app.config(function($routeProvider) {
-    $routeProvider
-    .when("/ficha", {
-        templateUrl : "templates/ficha.html",
-        controller: "libroFichaController"
-    });
-});
+			app.config(function($stateProvider) {
+
+				$stateProvider
+					.state('main',{
+						url:'/main',
+						templateUrl: 'templates/listado.html',
+						controller: 'BookStoreController'
+					})
+						.state('ficha',{
+						url:'/ficha',
+						templateUrl: 'templates/ficha.html',
+						controller: 'BookStoreController'
+					})
+
+
+
+			 	
+			});
+
+	
 
 })();

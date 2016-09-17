@@ -12,55 +12,12 @@
 
 <div class="container" ng-controller="BookStoreController as storebook">
 <h1 class="text-primary text-center">Tienda de Libros</h1>
-	<h4>Buscar:</h4> <input class="pull-left bg-success " type="text" placeholder="Busca un Libro" ng-model="searchText.titulo"/><br>
-	<div class="form-group">
-		<br>
-		<div class="form-group">
-			<label for="select">Ordenar por</label>
-				<select name="" id="select" class="form-control" ng-model="libro.id">
-					<option value="rate" selected="selected">Ordenar por</option>
-					<option value="1">Nombre</option>
-					<option value="2">Precio</option>
-					<option value="3">ID</option>
-				</select>
-	</div>
-	<div class="" ng-repeat="libro in storebook.articulos | filter:searchText">
-		<div class="row" background>
-		</div>
-			<br>
-			<div class="col-md-4">
-				<img ng-src="{{libro.images[0].url}}" class=" img-responsive img-rounded">
-			</div>
-			<div class="col-md-8">
-				<h2>
-				<a href="#/ficha"><p class="text-primary text-center">{{libro.titulo}}</p></a>
-				<em class="pull-right">{{libro.precio | currency}}</em>
-				</h2>
-				<h3 class="text-success">Descripcion</h3>
-				<p class="text-justify">{{libro.descripcion}}</p>
-					<section  ng-controller="PanelController as panel">
-						<ul class="nav nav-pills">
-							<li ng-class="{active:panel.isSelected(1)}"><a href="" ng-click="panel.selectTab(1)">Editorial</a></li>
-							<li ng-class="{active:panel.isSelected(2)}"><a href="" ng-click="panel.selectTab(2)">Autor</a></li>
-							<li ng-class="{active:panel.isSelected(3)}"><a href="" ng-click="panel.selectTab(3)">ID</a></li>
-						</ul>
-					<div class="panel" ng-show="panel.isSelected(1)">
-						<h4></h4>
-						<p>{{libro.editorial}}</p>
-					</div>
-					<div class="panel" ng-show="panel.isSelected(2)">
-						<h4></h4>
-						<p>{{libro.autor}}</p>
-					</div>
-					<div class="panel" ng-show="panel.isSelected(3)">
-					<h4></h4>
-					<p>{{libro.id}}</p>
-					</div>
-				</div>
-			</div>
-		</section>
-			</div>
-	</div>
+
+<button type = "button" class="btn btn-primary" ui-sref="main">Ir al listado de Libros</button>
+<button type = "button" class="btn btn-danger" ui-sref="ficha">Ir a la ficha</button>
+<div ui-view></div>
+<!-- Aqui estaba lo otro	 -->
+
 </div>
 
 
