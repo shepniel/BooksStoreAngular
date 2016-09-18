@@ -103,6 +103,13 @@
 
 	app.controller('libroFichaController',function(){
 		this.ficha=libros;
+		this.identificador=1;
+		this.selectID = function(setID){
+				this.identificador = setID;
+			};
+			this.isSelectedID = function(checkID){
+				return this.identificador === checkID;
+			};
 
 	});
 			app.config(function($stateProvider) {
@@ -118,12 +125,16 @@
 						templateUrl: 'templates/ficha.html',
 						controller: 'BookStoreController'
 					})
-
-
-
+						.state('dashboard',{
+						url:'/dashboard',
+						templateUrl: 'templates/dashboard.html',
+						controller: 'BookStoreController'
+					})
+						.state('dashboard.datos',{
+						url:'/datos',
+						templateUrl: 'templates/datos.html',
+						controller: 'BookStoreController'
+					})
 			 	
 			});
-
-	
-
 })();
