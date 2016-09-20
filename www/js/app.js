@@ -81,7 +81,7 @@
 		var app = angular.module('bookStoreApp',['ui.router']);
 	app.controller('BookStoreController', function(){
 		this.articulos=libros;
-
+		var ordenar = {};
 	});
 
 	app.controller('GalleryController',function(){
@@ -135,6 +135,35 @@
 						templateUrl: 'templates/datos.html',
 						controller: 'BookStoreController'
 					})
+						.state('pedidos',{
+						url:'/pedidos',
+						templateUrl: 'templates/mispedidos.html',
+						controller: 'BookStoreController'
+					})
 			 	
 			});
+			var mis_pedidos=[{
+
+					"id":4,
+					"fecha":"18/10/2016",
+					"resumen":"Gentlemen Broncos (1) / Java for dummies (2)",
+					"estado":"PAGADO",
+					"total":"200"
+			},
+			{
+					"id":8,
+					"fecha":"18/07/2016",
+					"resumen":"The Chronicles of Narnia (1) / Angular for dummies (2)",
+					"estado":"NO PAGADO",
+					"total":"400"	
+			},
+			{
+					"id":7,
+					"fecha":"18/02/2016",
+					"resumen":"La Divina Comedia(1) / Ionic for dummies (2)",
+					"estado":"PAGADO",
+					"total":"800"
+			}
+			];
+	
 })();
