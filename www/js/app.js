@@ -79,9 +79,10 @@
 		}
 		];
 		var app = angular.module('bookStoreApp',['ui.router']);
-	app.controller('BookStoreController', function(){
+
+		app.controller('BookStoreController', function(){
 		this.articulos=libros;
-		var ordenar = {};
+		
 	});
 
 	app.controller('GalleryController',function(){
@@ -101,17 +102,24 @@
 			};
 		});
 
-	app.controller('libroFichaController',function(){
-		this.ficha=libros;
-		this.identificador=1;
-		this.selectID = function(setID){
-				this.identificador = setID;
-			};
-			this.isSelectedID = function(checkID){
-				return this.identificador === checkID;
-			};
+	app.controller('libroFichaController',function($stateParams, $scope){
+
+		$stateParams.id;
+		$scope.articulo=libros[$stateParams.id];
 
 	});
+		app.controller('favoritosController',function($stateParams, $scope){
+
+				this.favoritos=mis_pedidos;
+				
+			});
+
+		app.controller('fichaCompletaController',function($stateParams, $scope){
+						$stateParams.id;
+				$scope.fichaa=mis_pedidos[$stateParams.id];
+				this.productos=mis_pedidos;
+		});
+	
 			app.config(function($stateProvider) {
 
 				$stateProvider
@@ -121,9 +129,9 @@
 						controller: 'BookStoreController'
 					})
 						.state('ficha',{
-						url:'/ficha',
+						url:'/ficha/:id',
 						templateUrl: 'templates/ficha.html',
-						controller: 'BookStoreController'
+						controller: 'libroFichaController'
 					})
 						.state('dashboard',{
 						url:'/dashboard',
@@ -135,10 +143,20 @@
 						templateUrl: 'templates/datos.html',
 						controller: 'BookStoreController'
 					})
-						.state('pedidos',{
+						.state('dashboard.pedidos',{
 						url:'/pedidos',
-						templateUrl: 'templates/mispedidos.html',
-						controller: 'BookStoreController'
+						templateUrl: 'templates/mis-pedidos.html',
+						controller: 'favoritosController'
+					})
+						.state('completeFicha',{
+						url:'/completeFicha',
+						templateUrl: 'templates/mis-pedidos-ficha.html',
+						controller: 'favoritosController'
+					})
+						.state('dashboard.prueba',{
+						url:'/prueba',
+						templateUrl: 'templates/prueba.html',
+						controller: 'favoritosController'
 					})
 			 	
 			});
@@ -153,9 +171,16 @@
 			{
 					"id":8,
 					"fecha":"18/07/2016",
-					"resumen":"The Chronicles of Narnia (1) / Angular for dummies (2)",
+					"resumen":"The Chronicles of Narnia/ Angular for dummies (2)",
 					"estado":"NO PAGADO",
 					"total":"400"	
+			},
+			{
+					"id":5,
+					"fecha":"18/12/2016",
+					"resumen":"El periquillo Sarniento/ El atlas (2)",
+					"estado":"PAGADO",
+					"total":"1200"	
 			},
 			{
 					"id":7,
@@ -165,5 +190,9 @@
 					"total":"800"
 			}
 			];
+
+
+
+
 	
 })();

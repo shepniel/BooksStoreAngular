@@ -1,0 +1,30 @@
+<div  class="form-group" ng-controller="favoritosController as dani">
+<br>
+<div ng-repeat="favorito in dani.favoritos" ">
+	<table class="table table-striped">
+		<thead>
+			<th>Fecha</th>
+			<th>Num</th>
+			<th>Pedido</th>
+			<th>Estado</th>
+			<th>Total</th>
+			<th>Ver ficha completa</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>{{favorito.fecha}}</td>
+				<td>{{favorito.id}}</td>
+				<td>{{favorito.resumen}}</td>
+				<td>{{favorito.estado}}</td>
+				<td>{{favorito.total}}</td>
+				<td><a  type = "button"  class="btn btn-primary" href="#/complete-ficha/{{$index}}">Ver ficha completa</a></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<br>
+	<button type = "button" class="btn btn-primary" ui-sref="dashboard">Regresar</button>
+	<div ui-view></div>
+
+</div>
