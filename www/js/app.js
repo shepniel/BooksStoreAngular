@@ -84,14 +84,6 @@
 		this.articulos=libros;
 		
 	});
-
-	app.controller('GalleryController',function(){
-				this.current = 0;
-				
-				this.setCurrent = function(imageNumber){
-					this.current = imageNumber || 0;
-				}
-		});
 	app.controller('PanelController',function(){
 			this.tab = 1;
 			this.selectTab = function(setTab){
@@ -108,18 +100,11 @@
 		$scope.articulo=libros[$stateParams.id];
 
 	});
+	
 		app.controller('favoritosController',function($stateParams, $scope){
 
 				this.favoritos=mis_pedidos;
-				
-			});
-
-		app.controller('fichaCompletaController',function($stateParams, $scope){
-						$stateParams.id;
-				$scope.fichaa=mis_pedidos[$stateParams.id];
-				this.productos=mis_pedidos;
-		});
-	
+			});	
 			app.config(function($stateProvider) {
 
 				$stateProvider
@@ -148,8 +133,8 @@
 						templateUrl: 'templates/mis-pedidos.html',
 						controller: 'favoritosController'
 					})
-						.state('completeFicha',{
-						url:'/completeFicha',
+						.state('dashboard.pedidos.completeFicha',{
+						url:'/completeFicha/:num',
 						templateUrl: 'templates/mis-pedidos-ficha.html',
 						controller: 'favoritosController'
 					})
@@ -162,28 +147,28 @@
 			});
 			var mis_pedidos=[{
 
-					"id":4,
+					"num":4,
 					"fecha":"18/10/2016",
 					"resumen":"Gentlemen Broncos (1) / Java for dummies (2)",
 					"estado":"PAGADO",
 					"total":"200"
 			},
 			{
-					"id":8,
+					"num":8,
 					"fecha":"18/07/2016",
 					"resumen":"The Chronicles of Narnia/ Angular for dummies (2)",
 					"estado":"NO PAGADO",
 					"total":"400"	
 			},
 			{
-					"id":5,
+					"num":5,
 					"fecha":"18/12/2016",
 					"resumen":"El periquillo Sarniento/ El atlas (2)",
 					"estado":"PAGADO",
 					"total":"1200"	
 			},
 			{
-					"id":7,
+					"num":7,
 					"fecha":"18/02/2016",
 					"resumen":"La Divina Comedia(1) / Ionic for dummies (2)",
 					"estado":"PAGADO",

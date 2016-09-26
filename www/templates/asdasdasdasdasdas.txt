@@ -1,0 +1,154 @@
+
+danie@DESKTOP-1ECVUD8 MINGW64 ~
+$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/danie/.ssh/id_rsa):
+Created directory '/c/Users/danie/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/danie/.ssh/id_rsa.
+Your public key has been saved in /c/Users/danie/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:2sp2Wb0gnFiehyQw+1bnArsMDeGMfGkZPtUQPUOKEsU danie@DESKTOP-1ECVUD8
+The key's randomart image is:
++---[RSA 2048]----+
+|  .o. o*.        |
+|   .E...=        |
+| ..=.X.  o       |
+|  o.% o + .      |
+|   o = @S* .     |
+|    . *oO = .    |
+|     +...* . .   |
+|     .+.o   .    |
+|     .o.         |
++----[SHA256]-----+
+
+danie@DESKTOP-1ECVUD8 MINGW64 ~
+$ ~/.ssh/id_rsa.pub
+/c/Users/danie/.ssh/id_rsa.pub: line 1: ssh-rsa: command not found
+
+danie@DESKTOP-1ECVUD8 MINGW64 ~
+$ ~/.ssh/id_rsa.pub
+/c/Users/danie/.ssh/id_rsa.pub: line 1: ssh-rsa: command not found
+
+danie@DESKTOP-1ECVUD8 MINGW64 ~
+$ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCupP5scLkw1L+Zmk6dZRjlf6lxQR6XbX/D1Jgmj8Os/BxsWFtc7rYah01t01ZBrAM+YK9ykNFnhVw3PCbixX4sqI5YrEU+/l1bJRKeJx7nIFiJOWgdP0VRjNEVeVTYNJ4zbMjRvWR2FrfPtnyiaXnhLbaGZwMsNDYl5VpOvRZbgyzFB8I06Q7hIgQEd1EZvtRhfFp0rhHsCNmBA8B4f3xCzUs6Gp5O7CJUVKB+7IdsqVcwsZeB0fxHY6Q2fcdzuYnZeMZZoQCkQ8nw2Tyn+qHKLBpZTWU1DgC6JoOt4UMTiP/QVow9jw2Kr97qoowGa2JcqWtNkKsMcF4bj2knAlZl danie@DESKTOP-1ECVUD8
+
+danie@DESKTOP-1ECVUD8 MINGW64 ~
+$ ^C
+
+danie@DESKTOP-1ECVUD8 MINGW64 ~
+$ ls
+AndroidStudioProjects/
+AppData/
+'Application Data'@
+Contacts/
+Cookies@
+Desktop/
+Documents/
+Downloads/
+Favorites/
+Links/
+'Local Settings'@
+Music/
+'My Documents'@
+NetHood@
+NTUSER.DAT
+ntuser.dat.LOG1
+ntuser.dat.LOG2
+NTUSER.DAT{f5b13604-4b48-11e6-80cb-e41d2d012050}.TM.blf
+NTUSER.DAT{f5b13604-4b48-11e6-80cb-e41d2d012050}.TMContainer00000000000000000001.regtrans-ms
+NTUSER.DAT{f5b13604-4b48-11e6-80cb-e41d2d012050}.TMContainer00000000000000000002.regtrans-ms
+ntuser.ini
+OneDrive/
+Pictures/
+PrintHood@
+Recent@
+'Saved Games'/
+Searches/
+SendTo@
+'Start Menu'@
+Templates@
+Videos/
+
+danie@DESKTOP-1ECVUD8 MINGW64 ~
+$ cd C:\workspaceWM
+
+danie@DESKTOP-1ECVUD8 MINGW64 /c/workspaceWM
+$ ls
+myApp/  workspaceWM/
+
+danie@DESKTOP-1ECVUD8 MINGW64 /c/workspaceWM
+$ cd workspaceWM
+
+danie@DESKTOP-1ECVUD8 MINGW64 /c/workspaceWM/workspaceWM
+$ cd flatlanderStore
+
+danie@DESKTOP-1ECVUD8 MINGW64 /c/workspaceWM/workspaceWM/flatlanderStore
+$ git init
+Initialized empty Git repository in C:/workspaceWM/workspaceWM/flatlanderStore/.git/
+
+danie@DESKTOP-1ECVUD8 MINGW64 /c/workspaceWM/workspaceWM/flatlanderStore (master)
+$ git add .
+warning: LF will be replaced by CRLF in www/css/bootstrap-theme.css.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in www/css/bootstrap-theme.min.css.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in www/css/bootstrap.css.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in www/css/bootstrap.min.css.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in www/fonts/glyphicons-halflings-regular.svg.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in www/js/angular.min.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in www/js/bootstrap.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in www/js/bootstrap.min.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in www/js/npm.js.
+The file will have its original line endings in your working directory.
+
+danie@DESKTOP-1ECVUD8 MINGW64 /c/workspaceWM/workspaceWM/flatlanderStore (master)
+$ git commit -m 'Initial commit'
+[master (root-commit) d352dc8] Initial commit
+ 18 files changed, 10377 insertions(+)
+ create mode 100644 www/css/bootstrap-theme.css
+ create mode 100644 www/css/bootstrap-theme.css.map
+ create mode 100644 www/css/bootstrap-theme.min.css
+ create mode 100644 www/css/bootstrap-theme.min.css.map
+ create mode 100644 www/css/bootstrap.css
+ create mode 100644 www/css/bootstrap.css.map
+ create mode 100644 www/css/bootstrap.min.css
+ create mode 100644 www/css/bootstrap.min.css.map
+ create mode 100644 www/fonts/glyphicons-halflings-regular.eot
+ create mode 100644 www/fonts/glyphicons-halflings-regular.svg
+ create mode 100644 www/fonts/glyphicons-halflings-regular.ttf
+ create mode 100644 www/fonts/glyphicons-halflings-regular.woff
+ create mode 100644 www/fonts/glyphicons-halflings-regular.woff2
+ create mode 100644 www/index.html
+ create mode 100644 www/js/angular.min.js
+ create mode 100644 www/js/bootstrap.js
+ create mode 100644 www/js/bootstrap.min.js
+ create mode 100644 www/js/npm.js
+
+danie@DESKTOP-1ECVUD8 MINGW64 /c/workspaceWM/workspaceWM/flatlanderStore (master)
+$ git remote add origin https://github.com/shepniel/AngularCourse.git
+
+danie@DESKTOP-1ECVUD8 MINGW64 /c/workspaceWM/workspaceWM/flatlanderStore (master)
+$ git push -u origin master
+To https://github.com/shepniel/AngularCourse.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/shepniel/AngularCourse.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+danie@DESKTOP-1ECVUD8 MINGW64 /c/workspaceWM/workspaceWM/flatlanderStore (master)
+$ ^C
+
+danie@DESKTOP-1ECVUD8 MINGW64 /c/workspaceWM/workspaceWM/flatlanderStore (master)
+$

@@ -1,6 +1,6 @@
 <div  class="form-group" ng-controller="favoritosController as dani">
 <br>
-<div ng-repeat="favorito in dani.favoritos" ">
+<div ng-repeat="favorito in dani.favoritos">
 	<table class="table table-striped">
 		<thead>
 			<th>Fecha</th>
@@ -13,11 +13,11 @@
 		<tbody>
 			<tr>
 				<td>{{favorito.fecha}}</td>
-				<td>{{favorito.id}}</td>
+				<td>{{favorito.num}}</td>
 				<td>{{favorito.resumen}}</td>
 				<td>{{favorito.estado}}</td>
 				<td>{{favorito.total}}</td>
-				<td><a  type = "button"  class="btn btn-primary" href="#/complete-ficha/{{$index}}">Ver ficha completa</a></td>
+				<td><a  type = "button"  class="btn btn-primary" ui-sref="dashboard.pedidos.completeFicha({num:favorito.num})">Ver ficha completa</a></td>
 			</tr>
 		</tbody>
 	</table>
